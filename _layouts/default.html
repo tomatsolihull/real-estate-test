@@ -54,11 +54,11 @@
           </div>
         </div>
 
-          <a class="navbar-item" href="/contact">
+          <a class="navbar-item {% if page.permalink contains "contact" %}is-active{% endif %}" href="/contact">
             Contact
           </a>
 
-          <a class="navbar-item" href="/about">
+          <a class="navbar-item {% if page.permalink contains "about" %}is-active{% endif %}" href="/about">
             About Us
           </a>
         </div>
@@ -75,6 +75,14 @@
   </nav>
 
   {{ content }}
+
+  <footer class="footer is-danger">
+    <div class="content has-text-centered">
+      <p>
+        &copy; 2022 SolCol Real Estate
+      </p>
+    </div>
+  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

@@ -4,11 +4,13 @@ collections:
   properties:
     layout: property
     output: true
-    permalink: /:slugified_categories/:name
+    permalink: /:slugified_categories/:title
 
 sass:
   sass_dir: assets/style
   style: compressed
+
+permalink: /:title
 
 defaults:
   - scope:
