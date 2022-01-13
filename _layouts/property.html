@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<section class="hero is-primary">
+    <div class="hero-body has-text-centered">
+      <p class="title">
+        {{ page.title }}
+      </p>
+      <p class="subtitle">
+        {{ page.status }}, £{{ page.price }}
+      </p>
+    </div>
+</section>
+
+<main class="container">
+
+<section class="columns">
+    <div class="column is-half">
+        <figure class="columnsimage is-128x128 ">
+            <img src="{{ page.image }}" alt="Placeholder image">
+        </figure>
+    </div>
+
+    <div class="column">
+        <div class="box">
+            <div class="block">
+                <p><strong>{{ page.beds }}</strong> bedrooms, <strong>{{ page.baths }}</strong> bathrooms</p>
+            </div>
+            
+            <div class="block">
+                <div class="buttons">
+                    <button class="button is-info is-light">Save to Watchlist</button>
+                    <button class="button is-success is-light">Request a Callback</button>
+                    <button class="button is-primary is-light">Arrange a Viewing</button>
+                  </div>
+            </div>
+        </div>
+
+        <div class="content box">
+            {{ content }}
+        </div>
+    </div>
+</section>
+
+</main>

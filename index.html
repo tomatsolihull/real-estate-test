@@ -1,0 +1,55 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<section class="hero is-large is-info">
+    <div class="hero-body">
+      <p class="title">
+        Welcome to SolCol Real Estate
+      </p>
+      <p class="subtitle">
+        A test website.
+      </p>
+    </div>
+</section>
+
+
+<section class="section">
+    <h1 class="title">Recently Listed</h1>
+    <h2 class="subtitle">
+      See what's new in Solihull!
+    </h2>
+
+    <div class="columns">
+
+{% for p in site.properties limit: 3 %}
+<div class="card column">
+    <div class="card-image">
+      <figure class="image is-4by3">
+        <img src="{{ p.image }}" alt="Placeholder image">
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-content">
+          <p class="title is-4"><span class="tag is-primary is-light">{{ p.status }}</span> {{ p.title }}</p>
+          <p class="subtitle is-6">£{{ p.price }} &bull; {{ p.beds }} bed &bull; {{ p.baths }} bath</p>
+        </div>
+      </div>
+  
+      <div class="content">
+        <time datetime="2016-1-1">Listed one week ago</time>
+      </div>
+    </div>
+
+    <footer class="card-footer">
+        <a href="#" class="card-footer-item">Watch</a>
+        <a href="{{ p.url }}" class="card-footer-item">View &raquo;</a>
+      </footer>
+</div>
+
+{% endfor %}
+</div>
+</section>
