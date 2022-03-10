@@ -4,7 +4,7 @@ collections:
   properties:
     layout: property
     output: true
-    permalink: /:slugified_categories/:title
+    permalink: /:title
 
 sass:
   sass_dir: assets/style
