@@ -10,8 +10,6 @@ sass:
   sass_dir: assets/style
   style: compressed
 
-permalink: /:title
-
 defaults:
   - scope:
       path: ""
